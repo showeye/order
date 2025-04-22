@@ -1,0 +1,70 @@
+{
+  "test_existing_track_order": {
+    "test_id": "test_existing_track_order",
+    "expected_tool": "_tool_track_order",
+    "expected_params": {"order_id": "ORD123"},
+    "expected_confirmation_needed": false
+  },
+  "test_nonexistent_track_order": {
+    "test_id": "test_nonexistent_track_order",
+    "expected_tool": "_tool_track_order",
+    "expected_params": {"order_id": "ORD999"},
+    "expected_confirmation_needed": false
+  },
+  "test_add_order_basic": {
+    "test_id": "test_add_order_basic",
+    "expected_tool": "_tool_add_order",
+    "expected_params": {"name": "Deluxe Pizza"},
+    "expected_confirmation_needed": false
+  },
+  "test_list_orders": {
+    "test_id": "test_list_orders",
+    "expected_tool": "_tool_list_orders",
+    "expected_params": {},
+    "expected_confirmation_needed": false
+  },
+  "test_cancel_check_eligible_order": {
+    "test_id": "test_cancel_check_eligible_order",
+    "expected_tool": "_tool_cancel_order_check",
+    "expected_params": {"order_id": "ORD789"},
+    "expected_confirmation_needed": true
+  },
+  "test_cancel_check_ineligible_order_policy": {
+    "test_id": "test_cancel_check_ineligible_order_policy",
+    "expected_tool": "_tool_cancel_order_check",
+    "expected_params": {"order_id": "ORD456"},
+    "expected_confirmation_needed": false
+  },
+  "test_cancel_check_nonexistent_order": {
+    "test_id": "test_cancel_check_nonexistent_order",
+    "expected_tool": "_tool_cancel_order_check",
+    "expected_params": {"order_id": "ORD000"},
+    "expected_confirmation_needed": false
+  },
+    "test_cancel_check_boundary_10_days": {
+    "test_id": "test_cancel_check_boundary_10_days",
+    "expected_tool": "_tool_cancel_order_check",
+    "expected_params": {"order_id": "ORD910"},
+    "expected_confirmation_needed": true
+  },
+  "test_cancel_check_boundary_11_days": {
+    "test_id": "test_cancel_check_boundary_11_days",
+    "expected_tool": "_tool_cancel_order_check",
+    "expected_params": {"order_id": "ORD911"},
+    "expected_confirmation_needed": false
+  },
+    "test_cancel_check_cancelled_ORD912": {
+      "test_id": "test_cancel_check_cancelled_ORD912",
+      "expected_tool": "_tool_cancel_order_check",
+      "expected_params": {"order_id": "ORD912"},
+      "expected_confirmation_needed": false
+  },
+  "test_network_fault_track_order": {
+    "test_id": "test_network_fault_track_order",
+    "expected_tool": "_tool_track_order",
+    "expected_params": {"order_id": "ORD123"},
+    "expected_confirmation_needed": false,
+    "expected_tool_call_succeeded": false,
+    "expects_tool_failure": true
+  }
+}
