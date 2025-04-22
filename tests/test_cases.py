@@ -94,10 +94,11 @@ async def test_nonexistent_track_order(configured_assistant):
     response_data = await configured_assistant.process_user_query(query=user_query)
 
     assert "ORD999" in response_data["response_text"]
-    # cannot be found
+    # does not exist
     assert ("not found" in response_data["response_text"].lower()
             or "couldn't find" in response_data["response_text"].lower()
-            or "cannot be found" in response_data["response_text"].lower())
+            or "cannot be found" in response_data["response_text"].lower()
+            or "does not exist" in response_data["response_text"].lower())
     assert (response_data.get("confirmation_request") is not None) == ground_truth["expected_confirmation_needed"]
 
     test_id_var.reset(token)

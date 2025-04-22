@@ -1,0 +1,13 @@
+--- Final Metrics ---
+Total Test Cases Analyzed: 11
+Test Cases Attempting Tool Calls: 11
+Total Execution Time (Log File): 30.0 seconds
+Average Test Case Duration: 2.73 seconds
+--------------------
+Tool Selection Accuracy: 100.00% (11/11)
+Parameter Extraction Accuracy: 100.00% (11/11)
+Correct Tool Invocation Rate: 100.00% (11/11)
+Tool Call Success Rate (Technical, Excl. Expected Failures): 100.00% (10/10)
+Average Tool Execution Latency (Successful Calls): 1.94 ms
+Cancellation Flow Compliance: 100.00% (6/6)
+--------------------
